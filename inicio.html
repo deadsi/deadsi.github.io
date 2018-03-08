@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurantes App | Inicio</title>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/LOGIN_ESPACIOS EN BLANCO.js"></script>
+    <link href="css/BARRA_BUSCAR.css" rel="stylesheet">
+    <link href="css/NAVEGACION.css" rel="stylesheet">
+    <link href="css/MODAL.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: url(images/indexbackground.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul id=barnav>
+            <li id="reg">
+                <a href="#" onclick="document.getElementById('MODAL_REGISTRO_USUARIO').style.display='block'">Registrate</a>
+            </li>
+            <li id="log">
+                <a href="#" onclick="document.getElementById('MODAL_INICIO_SESION').style.display='block'">Iniciar Sesion</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        <p style="text-align:center">
+            <br>
+            <img src="images/logo.png" alt="Restaurantes Sergio Arboleda">
+        </p>
+    </div>
+
+    <div>
+        <form class="form-wrapper">
+            <input type="text" id="search" placeholder="Pizza, Pasta, Burritos, Pollo..." required>
+            <input type="submit" value="Buscar" id="submit">
+        </form>
+    </div>
+
+<!--MODAL INICIAR SESION-->
+
+    <div id="MODAL_INICIO_SESION" class="modal">
+
+        <form class="modal-content animate" method="post" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('MODAL_INICIO_SESION').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container">
+                <label>
+                    <b>Username</b>
+                </label>
+                <input class="inputmodal" type="text" placeholder="Enter Username" name="user" id="user" required>
+
+                <label>
+                    <b>Password</b>
+                </label>
+                <input class="inputmodal" type="password" placeholder="Enter Password" name="pass" id="pass" required>
+
+                <button class="boton" name="login" id="login" type="submit">Login</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+
+
+            </div>
+        </form>
+    </div>
+
+    <!-- TRAER MODAL-->
+    <script>
+        let modal = document.getElementById('MODAL_INICIO_SESION');
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!--MODAL REGISTRO USUARIO-->
+
+    <div id="MODAL_REGISTRO_USUARIO" class="modal">
+
+        <form class="modal-content animate" method="post" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('MODAL_REGISTRO_USUARIO').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container">
+                <label>
+                    <b>Nombre</b>
+                </label>
+                <input class="inputmodal" type="text" placeholder="Introduzca Nombre" name="nombre" required>
+
+                <label>
+                    <b>Correo</b>
+                </label>
+                <input class="inputmodal" type="text" placeholder="Introduzca Correo" name="correo" required>
+
+                <label>
+                    <b>Nick</b>
+                </label>
+                <input class="inputmodal" type="text" placeholder="Introduzca Nickname" name="nick" required>
+
+                <label>
+                    <b>Contraseña</b>
+                </label>
+                <input class="inputmodal" type="password" placeholder="Introduzca Contraseña" name="password" required>
+
+                <button class="boton" type="submit">Login</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+
+
+            </div>
+        </form>
+    </div>
+
+<!-- TRAER MODAL REGISTRO USUARIO-->
+    <script>
+        let modal2 = document.getElementById('MODAL_REGISTRO_USUARIO');
+        window.onclick = function (event) {
+            if (event.target === modal2) {
+                modal2.style.display = "none";
+            }
+        }
+    </script>
+    
+<!--FOOTER-->
+    <div id="footer">Restaurantes Sergio Arboleda ® 2017</div>
+
+</body>
+</html>
